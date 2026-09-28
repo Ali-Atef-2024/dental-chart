@@ -1,0 +1,650 @@
+/* Host sheet */
+.dental-selector-overlay{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;padding:20px;background:rgba(15,23,42,.62);backdrop-filter:blur(6px)}
+.dental-selector-sheet{width:min(1220px,96vw);max-height:94vh;display:grid;grid-template-rows:auto auto minmax(0,1fr) auto auto;overflow:hidden;background:#fff;border:1px solid #dfe5ea;border-radius:22px;box-shadow:0 30px 90px rgba(15,23,42,.28);color:#1f2933}
+.dental-selector-header{display:flex;justify-content:space-between;gap:24px;padding:24px 28px 18px;border-bottom:1px solid #edf0f3}.dental-selector-header h2{margin:4px 0 0;font-size:24px}.dental-selector-header p{margin:7px 0 0;color:#75808b;font-size:13px}.eyebrow{font-size:10px;font-weight:900;letter-spacing:.16em;color:#78848e}.sheet-close{width:38px;height:38px;border:1px solid #e0e5e9;border-radius:50%;background:#fff;font-size:24px;color:#64717d;cursor:pointer}.sheet-close:hover{background:#f6f8fa}
+.dental-selector-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 28px;border-bottom:1px solid #edf0f3;background:#fafbfc}.numbering-control{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:800;color:#687580}.numbering-options{display:flex;gap:3px;padding:3px;border:1px solid #dfe4e9;border-radius:10px;background:#fff}.numbering-options button{border:0;border-radius:7px;background:transparent;padding:7px 12px;font-size:10px;font-weight:900;color:#697680;cursor:pointer}.numbering-options button.active{background:#e7f2fb;color:#1769aa}.selection-count{font-size:11px;color:#71808c}.selection-count strong{display:inline-grid;place-items:center;min-width:28px;margin-left:7px;padding:4px 8px;border-radius:999px;background:#eaf4fc;color:#1769aa}
+.dental-chart-viewport{min-height:0;overflow:auto;padding:18px 18px 10px;background:#fff}.dental-chart-viewport .layout{display:block!important;margin:0!important}.dental-chart-viewport .chart-column{width:100%!important;max-width:none!important}.dental-chart-viewport .panel,.dental-chart-viewport .perio-launch-bar,.dental-chart-viewport .tooth-info{display:none!important}.dental-chart-viewport .chart-column>.tooth-info-surface{display:none!important}.dental-chart-viewport .odontogram-root{width:100%!important}.dental-chart-viewport .chart-card{width:100%!important;max-width:none!important;box-shadow:none!important;border:0!important}.dental-chart-viewport .chart-card-header{display:none!important}.dental-chart-viewport .tooth-grid-wrap{width:100%!important}.dental-chart-viewport .tooth-grid{min-width:980px}.dental-chart-viewport .tooth-tile{transition:filter .16s ease,transform .16s ease}.dental-chart-viewport .tooth-tile:hover{filter:drop-shadow(0 5px 7px rgba(55,72,88,.22));z-index:10}.dental-chart-viewport .tooth-tile.active{filter:drop-shadow(0 0 3px rgba(23,105,170,.55)) drop-shadow(0 6px 10px rgba(23,105,170,.18));z-index:8}.dental-chart-viewport .tooth-tile.active .tooth-svg{outline:2px solid rgba(23,105,170,.75);outline-offset:3px;border-radius:8px}.dental-chart-viewport .tooth-label-cell{cursor:pointer}.dental-chart-viewport .tooth-label-cell:hover{color:#1769aa}
+.dental-selector-summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 28px;border-top:1px solid #edf0f3;border-bottom:1px solid #edf0f3;font-size:11px}.dental-selector-summary>div{display:flex;gap:12px;min-width:0}.dental-selector-summary strong{white-space:nowrap;color:#4d5964}.dental-selector-summary span{color:#74818c;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.selection-hint{font-size:10px;color:#9aa4ad;white-space:nowrap}
+.dental-selector-footer{display:flex;justify-content:flex-end;gap:10px;padding:14px 28px 18px}.secondary-button,.primary-button{min-height:40px;border-radius:9px;padding:0 18px;font-size:12px;font-weight:850;cursor:pointer}.secondary-button{border:1px solid #dfe4e9;background:#fff;color:#687580}.primary-button{border:1px solid #1769aa;background:#1769aa;color:#fff;box-shadow:0 5px 12px rgba(23,105,170,.16)}.primary-button:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+/* Visit / Add Service screen */
+.visit-page{min-height:100vh;padding:42px;background:#f5f7fa}.visit-card{width:min(900px,100%);margin:0 auto;background:#fff;border:1px solid #e1e7eb;border-radius:18px;box-shadow:0 18px 50px rgba(15,23,42,.08);overflow:hidden}.visit-header{display:flex;justify-content:space-between;gap:20px;padding:28px 32px;border-bottom:1px solid #edf0f3}.visit-header h1{margin:5px 0 0;font-size:28px}.visit-header p{margin:7px 0 0;color:#77838e;font-size:13px}.visit-status{height:max-content;padding:7px 11px;border-radius:999px;background:#eef8f2;color:#247447;font-size:11px;font-weight:800}.workflow{display:flex;align-items:center;padding:18px 32px;background:#fafbfc;border-bottom:1px solid #edf0f3}.workflow-step{display:flex;align-items:center;gap:8px;color:#8a949d;font-size:11px;font-weight:800}.workflow-step b{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;border:1px solid #dce2e6;background:#fff;font-size:10px}.workflow-step.active,.workflow-step.complete{color:#1769aa}.workflow-step.active b,.workflow-step.complete b{border-color:#9ec7e6;background:#eaf4fc;color:#1769aa}.workflow-line{height:1px;width:70px;margin:0 14px;background:#dfe5e9}.service-editor{padding:30px 32px}.field{display:grid;gap:8px;margin-bottom:20px}.field label{font-size:12px;font-weight:850;color:#4d5964}.field label span{color:#c33}.field select{width:100%;height:44px;padding:0 12px;border:1px solid #dbe2e7;border-radius:9px;background:#fff;color:#27333d;font-size:13px;outline:none}.field select:focus{border-color:#7db2d8;box-shadow:0 0 0 3px rgba(23,105,170,.08)}.service-rule{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:20px;border:1px solid #e4ebef;border-radius:10px;background:#f8fafb}.service-rule strong{font-size:12px}.service-rule span{font-size:11px;color:#75818c}.selection-result{display:grid;gap:8px;margin-bottom:18px}.selection-result>span{font-size:11px;font-weight:850;color:#596671}.selection-result>div{display:flex;flex-wrap:wrap;gap:7px}.tooth-chip{display:inline-flex;align-items:center;height:30px;padding:0 10px;border-radius:8px;background:#eaf4fc;color:#1769aa;font-size:11px;font-weight:850}.success-message{padding:11px 13px;border-radius:9px;background:#eef8f2;color:#246e45;font-size:11px}.actions{display:flex;justify-content:flex-end;margin-top:24px}
+@media(max-width:760px){.dental-selector-overlay{padding:0}.dental-selector-sheet{width:100%;height:100%;max-height:none;border-radius:0}.dental-selector-header,.dental-selector-toolbar,.dental-selector-summary,.dental-selector-footer{padding-left:18px;padding-right:18px}.dental-selector-toolbar{align-items:flex-start;flex-direction:column}.selection-hint{display:none}.dental-selector-footer{flex-direction:column-reverse}.dental-selector-footer button{width:100%}.visit-page{padding:16px}.visit-header{padding:22px 20px}.workflow{padding:16px 20px}.workflow-line{width:25px;margin:0 8px}.service-editor{padding:24px 20px}}
+
+/* v2 interaction fixes */
+.dental-chart-host{position:relative}
+.dental-selector-overlay{transition:opacity .12s ease;visibility:visible}
+.dental-chart-host.is-closed .dental-selector-overlay{opacity:0;visibility:hidden;pointer-events:none}
+.dental-chart-host.is-open .dental-selector-overlay{opacity:1;visibility:visible;pointer-events:auto}
+.dental-selector-sheet{position:relative}
+.toolbar-groups{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.dentition-control{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;color:#687580}
+.dentition-options{display:flex;gap:3px;padding:3px;border:1px solid #dfe4e9;border-radius:10px;background:#fff}
+.dentition-options button{border:0;border-radius:7px;background:transparent;padding:7px 12px;font-size:10px;font-weight:900;color:#697680;cursor:pointer}
+.dentition-options button.active{background:#e7f2fb;color:#1769aa}
+.dental-chart-viewport{position:relative;min-height:0;overflow:auto;padding:18px 18px 10px;background:#fff}
+.dental-chart-viewport .layout{display:block!important;margin:0!important}
+.dental-chart-viewport .chart-column{width:100%!important;max-width:none!important}
+.dental-chart-viewport .panel,.dental-chart-viewport .perio-launch-bar,.dental-chart-viewport .tooth-info{display:none!important}
+.dental-chart-viewport .chart-card{width:100%!important;max-width:none!important;box-shadow:none!important;border:0!important}
+.dental-chart-viewport .chart-card-header{display:none!important}
+.dental-chart-viewport .tooth-grid-wrap{width:100%!important;padding:18px!important}
+.dental-chart-viewport .tooth-grid{min-width:980px}
+.dental-chart-viewport .tooth-tile{transition:filter .16s ease,transform .16s ease}
+.dental-chart-viewport .tooth-tile:hover{filter:drop-shadow(0 5px 7px rgba(55,72,88,.22));z-index:10}
+.dental-chart-viewport .tooth-tile.active{filter:drop-shadow(0 0 3px rgba(23,105,170,.55)) drop-shadow(0 6px 10px rgba(23,105,170,.18));z-index:8}
+.dental-chart-viewport .tooth-tile.active .tooth-svg{outline:2px solid rgba(23,105,170,.75);outline-offset:3px;border-radius:8px}
+.dental-chart-viewport .tooth-label-cell{cursor:pointer}
+@media(max-width:760px){.toolbar-groups{width:100%;flex-direction:column;align-items:flex-start}.dental-selector-sheet{height:100%;max-height:none}.dental-selector-overlay{padding:0}.dental-chart-viewport{padding:10px}.dental-chart-viewport .tooth-grid{min-width:900px}}
+
+/* App-owned tooth selection: does not depend on the library Ctrl/Cmd selection UX. */
+.dental-chart-viewport .tooth-tile.app-tooth-selected {
+  filter: drop-shadow(0 0 4px rgba(23,105,170,.70)) drop-shadow(0 7px 12px rgba(23,105,170,.20));
+  z-index: 20;
+}
+.dental-chart-viewport .tooth-tile.app-tooth-selected .tooth-svg {
+  outline: 2px solid rgba(23,105,170,.85);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* v6: app-owned full/mixed dentition view. The library is used only as the
+   anatomical SVG source; selection and numbering belong to this component. */
+.dental-engine-source{position:fixed;left:-100000px;top:0;width:1180px;height:620px;overflow:hidden;visibility:hidden;pointer-events:none;z-index:-1}
+.chart-loading{min-height:420px;display:grid;place-items:center;color:#87939d;font-size:12px}
+.custom-odontogram{min-width:1080px;max-width:1160px;margin:0 auto;padding:8px 12px 18px}
+.jaw-section{display:grid;gap:8px}
+.jaw-label{font-size:9px;letter-spacing:.16em;font-weight:900;color:#9aa5ae;text-align:center}
+.tooth-row{display:grid;grid-template-columns:repeat(16,minmax(50px,1fr));gap:4px;align-items:end}
+.primary-row{grid-template-columns:repeat(10,minmax(50px,1fr));width:63%;margin:0 auto;padding:2px 0 5px}
+.lower-jaw .primary-row{align-items:start}
+.custom-tooth{appearance:none;border:0;background:transparent;padding:4px 2px 3px;border-radius:10px;cursor:pointer;display:grid;grid-template-rows:minmax(84px,1fr) auto;align-items:center;justify-items:center;color:#46525d;min-width:0}
+.custom-tooth:hover{background:#f6f9fb;filter:drop-shadow(0 4px 8px rgba(55,72,88,.18))}
+.custom-tooth.is-selected{background:#eaf4fc;box-shadow:inset 0 0 0 2px rgba(23,105,170,.72);filter:drop-shadow(0 5px 10px rgba(23,105,170,.20))}
+.custom-tooth-art{width:100%;height:84px;display:grid;place-items:center;pointer-events:none}
+.custom-tooth-art svg{width:100%;height:100%;max-width:64px;display:block}
+.custom-tooth-number{font-size:11px;line-height:18px;font-weight:900;white-space:nowrap}
+.primary-row .custom-tooth{grid-template-rows:minmax(70px,1fr) auto}
+.primary-row .custom-tooth-art{height:70px}
+.primary-row .custom-tooth-art svg{max-width:54px}
+.primary-row .custom-tooth-number{font-size:10px}
+.mouth-midline{display:flex;align-items:center;justify-content:center;gap:9px;height:24px;margin:2px 0;color:#a2acb4;font-size:8px;font-weight:900;letter-spacing:.1em}
+.mouth-midline i{display:block;width:1px;height:18px;background:#d7dde2}
+.lower-jaw .permanent-row{align-items:start}
+.lower-jaw .custom-tooth-art{transform:rotate(180deg)}
+.lower-jaw .primary-row .custom-tooth-art{transform:rotate(180deg)}
+.custom-view-permanent .primary-row,.custom-view-primary .permanent-row{display:none}
+.custom-view-primary .primary-row{width:63%}
+@media(max-width:900px){.custom-odontogram{min-width:980px}.dental-chart-viewport{overflow:auto}.tooth-row{gap:2px}.primary-row{width:63%}}
+
+/* v7: clearer mixed-dentition layout and reliable multi-tooth interaction */
+.custom-odontogram {
+  min-width: 1160px;
+  max-width: 1240px;
+  padding: 10px 16px 22px;
+}
+
+.jaw-section {
+  gap: 10px;
+}
+
+.dentition-band-label {
+  width: 100%;
+  text-align: center;
+  font-size: 8px;
+  line-height: 14px;
+  letter-spacing: .18em;
+  font-weight: 900;
+  color: #9aa5ae;
+}
+
+.dentition-band-label.primary-label {
+  margin-top: 2px;
+  color: #a8a08f;
+}
+
+.tooth-row {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(54px, 1fr));
+  gap: 8px;
+  width: 100%;
+  align-items: end;
+}
+
+.primary-row {
+  grid-template-columns: repeat(16, minmax(54px, 1fr));
+  width: 100%;
+  margin: 0;
+  padding: 2px 0 4px;
+  align-items: end;
+}
+
+.custom-tooth {
+  width: 100%;
+  min-width: 0;
+  min-height: 124px;
+  padding: 5px 3px 4px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  transition: background .14s ease, border-color .14s ease, box-shadow .14s ease, transform .14s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.custom-tooth:hover {
+  background: #f7fafc;
+  border-color: #e2e8ed;
+  filter: drop-shadow(0 4px 8px rgba(55,72,88,.16));
+  transform: translateY(-1px);
+  z-index: 4;
+}
+
+.custom-tooth.is-selected {
+  background: #edf6fd;
+  border-color: #4b9bd1;
+  box-shadow: 0 0 0 2px rgba(23,105,170,.12), 0 7px 14px rgba(23,105,170,.13);
+  z-index: 8;
+}
+
+.custom-tooth-art {
+  width: 100%;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.custom-tooth-art svg {
+  width: 100%;
+  height: 100%;
+  max-width: 68px;
+  display: block;
+  overflow: visible;
+}
+
+.custom-tooth-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 22px;
+  padding: 0 5px;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 900;
+  color: #3f4b55;
+  white-space: nowrap;
+}
+
+.custom-tooth.is-selected .custom-tooth-number {
+  background: #1769aa;
+  color: #fff;
+}
+
+.primary-row .custom-tooth {
+  min-height: 104px;
+  grid-template-rows: 76px auto;
+}
+
+.primary-row .custom-tooth-art {
+  height: 76px;
+}
+
+.primary-row .custom-tooth-art svg {
+  max-width: 56px;
+}
+
+.primary-row .custom-tooth-number {
+  font-size: 10px;
+}
+
+.mouth-midline {
+  height: 28px;
+  margin: 8px 0;
+}
+
+.lower-jaw .permanent-row {
+  align-items: start;
+}
+
+.lower-jaw .custom-tooth-art {
+  transform: rotate(180deg);
+}
+
+.lower-jaw .primary-row .custom-tooth-art {
+  transform: rotate(180deg);
+}
+
+.custom-view-permanent .primary-row,
+.custom-view-permanent .dentition-band-label {
+  display: none;
+}
+
+.custom-view-primary .permanent-row,
+.custom-view-primary .dentition-band-label:not(.primary-label) {
+  display: none;
+}
+
+.custom-view-primary .primary-row {
+  display: grid;
+}
+
+/* Keep the actual click target on our React button, never on SVG internals. */
+.custom-tooth,
+.custom-tooth * {
+  pointer-events: auto;
+}
+
+.custom-tooth-art,
+.custom-tooth-art * {
+  pointer-events: none !important;
+}
+
+@media (max-width: 900px) {
+  .custom-odontogram {
+    min-width: 1080px;
+  }
+
+  .tooth-row,
+  .primary-row {
+    grid-template-columns: repeat(16, minmax(48px, 1fr));
+    gap: 5px;
+  }
+}
+
+/* v8: compact full-mouth layout + stable selection across numbering changes */
+.dental-selector-sheet {
+  width: min(1240px, 96vw);
+  max-height: 96vh;
+}
+
+.dental-chart-viewport {
+  overflow: hidden;
+  padding: 8px 14px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-odontogram {
+  width: 100%;
+  min-width: 0;
+  max-width: 1180px;
+  padding: 2px 4px 6px;
+  margin: 0 auto;
+}
+
+.jaw-section {
+  gap: 4px;
+}
+
+.jaw-label,
+.dentition-band-label {
+  font-size: 7px;
+  line-height: 11px;
+  letter-spacing: .18em;
+}
+
+.tooth-row,
+.primary-row {
+  width: 100%;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  gap: 2px;
+}
+
+.custom-tooth {
+  min-height: 86px;
+  padding: 2px 1px;
+  border-radius: 9px;
+  grid-template-rows: 66px auto;
+}
+
+.custom-tooth-art {
+  height: 66px;
+}
+
+.custom-tooth-art svg {
+  max-width: 54px;
+  max-height: 64px;
+}
+
+.custom-tooth-number {
+  min-width: 25px;
+  min-height: 18px;
+  padding: 0 4px;
+  border-radius: 5px;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.primary-row .custom-tooth {
+  min-height: 70px;
+  grid-template-rows: 52px auto;
+}
+
+.primary-row .custom-tooth-art {
+  height: 52px;
+}
+
+.primary-row .custom-tooth-art svg {
+  max-width: 43px;
+  max-height: 50px;
+}
+
+.primary-row .custom-tooth-number {
+  font-size: 9px;
+  min-height: 17px;
+  line-height: 15px;
+}
+
+.mouth-midline {
+  height: 18px;
+  margin: 2px 0;
+  gap: 7px;
+  font-size: 7px;
+}
+
+.mouth-midline i {
+  height: 14px;
+}
+
+/* In the 16-column anatomical grid, primary teeth occupy the five outer
+   positions on each side: 55..51 and 61..65 / 85..81 and 71..75. */
+.primary-row .custom-tooth:nth-child(6) { grid-column: 12; }
+.primary-row .custom-tooth:nth-child(7) { grid-column: 13; }
+.primary-row .custom-tooth:nth-child(8) { grid-column: 14; }
+.primary-row .custom-tooth:nth-child(9) { grid-column: 15; }
+.primary-row .custom-tooth:nth-child(10) { grid-column: 16; }
+
+@media (max-width: 1000px) and (min-width: 761px) {
+  .dental-selector-header { padding: 18px 20px 12px; }
+  .dental-selector-toolbar { padding: 9px 20px; }
+  .dental-selector-summary { padding: 9px 20px; }
+  .dental-selector-footer { padding: 10px 20px 12px; }
+  .dental-chart-viewport { padding: 5px 8px 2px; }
+  .custom-tooth { grid-template-rows: 60px auto; min-height: 78px; }
+  .custom-tooth-art { height: 60px; }
+  .custom-tooth-art svg { max-width: 49px; }
+  .primary-row .custom-tooth { grid-template-rows: 48px auto; min-height: 65px; }
+  .primary-row .custom-tooth-art { height: 48px; }
+  .primary-row .custom-tooth-art svg { max-width: 40px; }
+}
+
+@media (max-width: 760px) {
+  .dental-chart-viewport {
+    overflow: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .custom-odontogram {
+    min-width: 820px;
+  }
+}
+
+/* v10: fixed anatomical grid
+   Permanent and primary teeth share exactly the same 16-column coordinate
+   system. Selection never changes cell dimensions. */
+
+.dental-selector-sheet {
+  width: min(1280px, 97vw);
+  max-height: 96vh;
+}
+
+.dental-chart-viewport {
+  overflow: hidden;
+  padding: 10px 18px 8px;
+  background: linear-gradient(180deg, #fbfcfd 0%, #ffffff 100%);
+}
+
+.custom-odontogram {
+  width: 100%;
+  max-width: 1240px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 2px 0 5px;
+}
+
+.jaw-section {
+  display: grid;
+  gap: 4px;
+}
+
+.jaw-label {
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #f1f4f6;
+  color: #66737e;
+  font-size: 8px;
+  line-height: 18px;
+  letter-spacing: .16em;
+  font-weight: 900;
+}
+
+.dentition-band-label {
+  width: 100%;
+  text-align: center;
+  color: #89959f;
+  font-size: 7px;
+  line-height: 11px;
+  letter-spacing: .18em;
+  font-weight: 900;
+}
+
+.dentition-band-label.primary-label {
+  color: #9b8c6d;
+  margin-top: 1px;
+}
+
+/* The 16 columns are anatomical positions, not just visual spacing. */
+.tooth-row,
+.primary-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  column-gap: 3px;
+  row-gap: 0;
+  align-items: start;
+}
+
+.custom-tooth {
+  width: 100%;
+  min-width: 0;
+  height: 76px;
+  box-sizing: border-box;
+  padding: 2px 1px 1px;
+  display: grid;
+  grid-template-rows: 56px 18px;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #34424d;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition:
+    background .14s ease,
+    border-color .14s ease,
+    box-shadow .14s ease;
+}
+
+/* Hover/selection must never alter geometry. */
+.custom-tooth:hover {
+  background: #f3f7fa;
+  border-color: #d7e0e6;
+  box-shadow: 0 4px 8px rgba(55,72,88,.12);
+  z-index: 4;
+}
+
+.custom-tooth.is-selected {
+  background: #e9f4fc;
+  border-color: #4c9bd0;
+  box-shadow:
+    0 0 0 2px rgba(23,105,170,.10),
+    0 5px 12px rgba(23,105,170,.14);
+  z-index: 8;
+}
+
+.custom-tooth-art {
+  width: 100%;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.custom-tooth-art svg {
+  display: block;
+  width: auto;
+  height: 53px;
+  max-width: 53px;
+  overflow: visible;
+}
+
+.custom-tooth-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 34px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 5px;
+  color: #34424d;
+  background: #eef2f5;
+  font-size: 10px;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.custom-tooth.is-selected .custom-tooth-number {
+  background: #1769aa;
+  color: #fff;
+}
+
+.primary-row {
+  min-height: 58px;
+}
+
+.primary-row .custom-tooth {
+  height: 58px;
+  grid-template-rows: 40px 17px;
+  padding-top: 1px;
+}
+
+.primary-row .custom-tooth-art {
+  height: 40px;
+}
+
+.primary-row .custom-tooth-art svg {
+  height: 39px;
+  max-width: 40px;
+}
+
+.primary-row .custom-tooth-number {
+  min-width: 30px;
+  height: 17px;
+  font-size: 9px;
+  line-height: 17px;
+}
+
+.mouth-midline {
+  height: 22px;
+  margin: 3px 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #7c8993;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.mouth-midline i {
+  width: 1px;
+  height: 14px;
+  background: #cbd3d9;
+}
+
+.lower-jaw .permanent-row,
+.lower-jaw .primary-row {
+  align-items: start;
+}
+
+.lower-jaw .custom-tooth-art {
+  transform: rotate(180deg);
+}
+
+.lower-jaw .primary-row .custom-tooth-art {
+  transform: rotate(180deg);
+}
+
+.custom-view-permanent .primary-row,
+.custom-view-permanent .primary-label,
+.custom-view-primary .permanent-row,
+.custom-view-primary .dentition-band-label:not(.primary-label) {
+  display: none;
+}
+
+/* Palmer has longer labels. Give the badge enough room without changing
+   the cell width or causing neighbouring cells to move. */
+.custom-tooth-number {
+  max-width: 100%;
+}
+
+@media (max-width: 1000px) and (min-width: 761px) {
+  .dental-selector-header { padding: 18px 20px 12px; }
+  .dental-selector-toolbar { padding: 9px 20px; }
+  .dental-chart-viewport { padding: 6px 10px 3px; }
+
+  .custom-tooth {
+    height: 70px;
+    grid-template-rows: 51px 18px;
+  }
+
+  .custom-tooth-art {
+    height: 51px;
+  }
+
+  .custom-tooth-art svg {
+    height: 49px;
+    max-width: 49px;
+  }
+
+  .primary-row .custom-tooth {
+    height: 54px;
+    grid-template-rows: 39px 15px;
+  }
+
+  .primary-row .custom-tooth-art {
+    height: 39px;
+  }
+
+  .primary-row .custom-tooth-art svg {
+    height: 37px;
+    max-width: 38px;
+  }
+}
+
+@media (max-width: 760px) {
+  .dental-chart-viewport {
+    overflow: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .custom-odontogram {
+    min-width: 900px;
+  }
+}

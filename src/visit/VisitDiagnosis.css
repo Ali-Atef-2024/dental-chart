@@ -1,0 +1,923 @@
+.vd-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  color: #1f2937;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.vd-header {
+  min-height: 82px;
+  padding: 20px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e4e8ee;
+}
+
+.vd-kicker {
+  margin-bottom: 5px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+
+  color: #7b8490;
+}
+
+.vd-header h1 {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+.vd-header p {
+  margin: 5px 0 0;
+
+  color: #707b88;
+  font-size: 12px;
+}
+
+/* =========================
+   SAVE STATUS
+========================= */
+
+.vd-save {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  white-space: nowrap;
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.vd-save i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+.vd-save.saved {
+  color: #287a45;
+}
+
+.vd-save.saving {
+  color: #1976d2;
+}
+
+.vd-save.offline {
+  color: #9a6700;
+}
+
+/* =========================
+   VISIT STEPS
+========================= */
+
+.vd-steps {
+  min-height: 50px;
+
+  padding: 7px 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  background: #fbfcfd;
+  border-bottom: 1px solid #e4e8ee;
+}
+
+.vd-step {
+  min-height: 34px;
+
+  padding: 5px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  border-radius: 8px;
+
+  color: #8a939f;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.vd-step b {
+  width: 21px;
+  height: 21px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #edf0f4;
+
+  font-size: 10px;
+}
+
+.vd-step.active {
+  color: #1f2937;
+}
+
+.vd-step.active b {
+  background: #1976d2;
+  color: #ffffff;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.vd-layout {
+  width: min(1480px, 100%);
+
+  margin: 0 auto;
+
+  padding: 22px 24px 105px;
+
+  display: grid;
+  grid-template-columns: 370px minmax(0, 1fr);
+
+  gap: 20px;
+}
+
+/* =========================
+   SEARCH PANEL
+========================= */
+
+.vd-search-panel {
+  align-self: start;
+
+  position: sticky;
+  top: 16px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8ee;
+  border-radius: 14px;
+
+  box-shadow:
+    0 2px 5px rgba(20, 30, 40, 0.025);
+}
+
+.vd-search-panel h2,
+.vd-workspace h2 {
+  margin: 0 0 5px;
+
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.vd-search-panel > p,
+.vd-workspace > p {
+  margin: 0;
+
+  color: #727d89;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================
+   SEARCH INPUT
+========================= */
+
+.vd-search {
+  height: 44px;
+
+  margin-top: 15px;
+
+  padding: 0 11px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid #d7dde5;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.vd-search:focus-within {
+  border-color: #83b9ed;
+
+  box-shadow:
+    0 0 0 3px rgba(25, 118, 210, 0.08);
+}
+
+.vd-search > span {
+  color: #7d8793;
+
+  font-size: 19px;
+}
+
+.vd-search input {
+  min-width: 0;
+
+  flex: 1;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #202833;
+
+  font: inherit;
+  font-size: 12px;
+}
+
+.vd-search input::placeholder {
+  color: #a0a8b2;
+}
+
+.vd-search button {
+  width: 24px;
+  height: 24px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: #f0f2f5;
+
+  color: #737d89;
+
+  cursor: pointer;
+
+  font-size: 15px;
+}
+
+/* =========================
+   TYPE TABS
+========================= */
+
+.vd-tabs {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 6px;
+
+  margin-top: 12px;
+}
+
+.vd-tabs button {
+  min-height: 34px;
+
+  padding: 6px 7px;
+
+  border: 1px solid #e1e6ec;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #626d79;
+
+  cursor: pointer;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.vd-tabs button:hover {
+  border-color: #b9c9d9;
+}
+
+.vd-tabs button.active {
+  border-color: #a7c9ec;
+
+  background: #edf6ff;
+
+  color: #1769aa;
+}
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
+.vd-section-title {
+  margin: 16px 0 7px;
+
+  color: #808b98;
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.vd-result {
+  width: 100%;
+
+  min-height: 54px;
+
+  padding: 8px 2px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  border: 0;
+  border-bottom: 1px solid #edf0f3;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.vd-result:hover {
+  background: #f8fafc;
+}
+
+.vd-result > span {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 7px;
+
+  background: #eef3f8;
+
+  color: #596b7c;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.vd-result strong {
+  min-width: 0;
+
+  flex: 1;
+
+  color: #28313b;
+
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.vd-result small {
+  display: block;
+
+  margin-top: 3px;
+
+  overflow: hidden;
+
+  color: #7a8491;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vd-result em {
+  flex: 0 0 auto;
+
+  color: #64748b;
+
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* =========================
+   WORKSPACE
+========================= */
+
+.vd-workspace {
+  min-width: 0;
+}
+
+/* =========================
+   SELECTED DATA GRID
+========================= */
+
+.vd-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 13px;
+}
+
+.vd-card {
+  min-width: 0;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8ee;
+  border-radius: 13px;
+
+  box-shadow:
+    0 2px 5px rgba(20, 30, 40, 0.02);
+}
+
+.vd-card-head {
+  min-height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vd-card-head h3 {
+  margin: 0;
+
+  color: #27313c;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.vd-card-head span {
+  min-width: 22px;
+
+  padding: 3px 7px;
+
+  border-radius: 999px;
+
+  background: #eef2f6;
+
+  color: #647080;
+
+  text-align: center;
+
+  font-size: 9px;
+  font-weight: 850;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.vd-empty {
+  padding: 12px 0;
+
+  color: #8a94a1;
+
+  font-size: 11px;
+}
+
+/* =========================
+   SELECTED CLINICAL ITEM
+========================= */
+
+.vd-item {
+  min-height: 48px;
+
+  margin-top: 7px;
+  padding: 8px 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  border: 1px solid #edf0f3;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.vd-item:hover {
+  background: #fafbfd;
+
+  border-color: #dce3ea;
+}
+
+.vd-item.selected {
+  background: #f2f8ff;
+
+  border-color: #9bc6f5;
+}
+
+.vd-item strong {
+  display: block;
+
+  color: #27313c;
+
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.vd-item small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #7b8591;
+
+  font-size: 9px;
+}
+
+.vd-item button {
+  width: 25px;
+  height: 25px;
+
+  flex: 0 0 25px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #9aa3ae;
+
+  cursor: pointer;
+
+  font-size: 17px;
+}
+
+.vd-item button:hover {
+  background: #f3f4f6;
+
+  color: #d34b4b;
+}
+
+/* =========================
+   DIAGNOSIS DETAIL
+========================= */
+
+.vd-detail {
+  margin-top: 14px;
+
+  padding: 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe6ee;
+  border-radius: 13px;
+
+  box-shadow:
+    0 2px 5px rgba(20, 30, 40, 0.025);
+}
+
+.vd-detail-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.vd-detail-head label {
+  color: #7a8491;
+
+  font-size: 9px;
+  font-weight: 850;
+
+  letter-spacing: 0.12em;
+}
+
+.vd-detail h3 {
+  margin: 5px 0 3px;
+
+  color: #222c36;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.vd-detail p {
+  margin: 0;
+
+  color: #6f7a86;
+
+  font-size: 10px;
+}
+
+.vd-detail-head > button {
+  flex: 0 0 auto;
+
+  min-height: 36px;
+
+  padding: 0 13px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #1976d2;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+.vd-detail-head > button:hover {
+  background: #1565b7;
+}
+
+.vd-detail-head > button:active {
+  transform: translateY(1px);
+}
+
+/* =========================
+   DIAGNOSIS FIELDS
+========================= */
+
+.vd-fields {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.vd-fields label {
+  display: grid;
+
+  gap: 6px;
+}
+
+.vd-fields label span,
+.vd-notes span,
+.vd-teeth > label {
+  color: #707b87;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.vd-fields select {
+  width: 100%;
+
+  min-height: 36px;
+
+  padding: 0 9px;
+
+  border: 1px solid #d7dee7;
+  border-radius: 8px;
+
+  outline: 0;
+
+  background: #ffffff;
+
+  color: #303943;
+
+  font: inherit;
+  font-size: 11px;
+}
+
+.vd-fields select:focus {
+  border-color: #82b8e9;
+
+  box-shadow:
+    0 0 0 3px rgba(25, 118, 210, 0.07);
+}
+
+/* =========================
+   ASSOCIATED TEETH
+========================= */
+
+.vd-teeth {
+  margin-top: 16px;
+}
+
+.vd-teeth > div {
+  min-height: 30px;
+
+  margin-top: 7px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+.vd-teeth span {
+  padding: 5px 8px;
+
+  border-radius: 6px;
+
+  background: #edf5ff;
+
+  color: #1769aa;
+
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.vd-teeth small {
+  color: #8a94a1;
+
+  font-size: 10px;
+}
+
+/* =========================
+   CLINICAL NOTE
+========================= */
+
+.vd-notes {
+  display: grid;
+
+  gap: 6px;
+
+  margin-top: 15px;
+}
+
+.vd-notes textarea {
+  width: 100%;
+  min-height: 78px;
+
+  box-sizing: border-box;
+
+  padding: 9px;
+
+  resize: vertical;
+
+  border: 1px solid #d7dee7;
+  border-radius: 8px;
+
+  outline: 0;
+
+  color: #303943;
+
+  font: inherit;
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+.vd-notes textarea:focus {
+  border-color: #82b8e9;
+
+  box-shadow:
+    0 0 0 3px rgba(25, 118, 210, 0.07);
+}
+
+/* =========================
+   FIXED FOOTER
+========================= */
+
+.vd-footer {
+  position: fixed;
+
+  z-index: 50;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  min-height: 62px;
+
+  box-sizing: border-box;
+
+  padding: 9px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-top: 1px solid #e1e6ec;
+
+  backdrop-filter: blur(8px);
+}
+
+.vd-footer > button {
+  min-height: 38px;
+
+  padding: 0 16px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #1976d2;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.vd-footer > button:hover {
+  background: #1565b7;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+  .vd-layout {
+    grid-template-columns: 320px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .vd-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .vd-search-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 650px) {
+  .vd-header {
+    padding: 17px;
+  }
+
+  .vd-header h1 {
+    font-size: 20px;
+  }
+
+  .vd-header > .vd-save {
+    display: none;
+  }
+
+  .vd-steps {
+    padding: 6px 12px;
+
+    overflow-x: auto;
+  }
+
+  .vd-step {
+    flex: 0 0 auto;
+  }
+
+  .vd-layout {
+    padding:
+      15px
+      12px
+      92px;
+  }
+
+  .vd-grid,
+  .vd-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .vd-footer {
+    padding:
+      9px
+      12px;
+  }
+}
